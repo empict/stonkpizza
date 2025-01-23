@@ -1,0 +1,43 @@
+﻿<Application x:Class="Pizzeria.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:view="clr-namespace:Pizzeria.View"
+             xmlns:viewmodels="clr-namespace:Pizzeria.ViewModel"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes">
+    <Application.Resources>
+        <!-- Material Design thema's -->
+        <ResourceDictionary>
+
+            <DataTemplate DataType="{x:Type viewmodels:MainViewModel}">
+                <view:MainView/>
+            </DataTemplate>
+            
+            <DataTemplate DataType="{x:Type viewmodels:ContactPageViewModel}">
+                <view:ContactPage/>
+            </DataTemplate>
+
+            <DataTemplate DataType="{x:Type viewmodels:LogInViewModel}">
+                <view:LogInView/>
+            </DataTemplate>
+
+            <DataTemplate DataType="{x:Type viewmodels:PizzaViewModel}">
+                <view:PizzaView/>
+            </DataTemplate>
+
+            <DataTemplate DataType="{x:Type viewmodels:BestellingViewModel}">
+                <view:BestellingView/>
+            </DataTemplate>
+
+
+
+            <ResourceDictionary.MergedDictionaries>
+                <!-- Material Design thema's -->
+                
+                <!-- Material Design kleuren -->
+                <materialDesign:BundledTheme BaseTheme="Light" PrimaryColor="DeepPurple" SecondaryColor="Lime" />
+
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesign3.Defaults.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>
